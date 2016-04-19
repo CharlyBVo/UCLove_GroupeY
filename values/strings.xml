@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">UcLove</string>
+    <string name="connectButton">Se connecter</string>
+    <string name="EnterLogin">Login</string>
+    <string name="EnterPswd">password</string>
+    <string name="ConnectButton">Se connecter</string>
+    <string name="SignUpButton">S\'inscrire</string>
+    <string name="myProfileButton">Mon profil</string>
+    <string name="myFriendsButton">Mes amis</string>
+    <string name="myMeetingButton">Rencontres</string>
+    <string name="myMessagesButton">Messages</string>
+    <string name="ResearchButton">Recherche</string>
+    <string name="myHistoryButton">Historique</string>
+    <string name="parametersButton">Paramètres et Infos</string>
+</resources>
