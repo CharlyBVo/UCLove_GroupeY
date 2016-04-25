@@ -2,7 +2,7 @@
     <string name="app_name">UcLove</string>
     <string name="connectButton">Se connecter</string>
     <string name="EnterLogin">Login</string>
-    <string name="EnterPswd">password</string>
+    <string name="EnterPswd">Password</string>
     <string name="ConnectButton">Se connecter</string>
     <string name="SignUpButton">S\'inscrire</string>
     <string name="myProfileButton">Mon profil</string>
@@ -12,7 +12,6 @@
     <string name="ResearchButton">Recherche</string>
     <string name="myHistoryButton">Historique</string>
     <string name="parametersButton">Paramètres et Infos</string>
-    <string name="GenreInscription">Genre</string>
     <string name="Prenom">Prénom</string>
     <string name="Nom">Nom</string>
     <string name="Datedenaissance">Date de naissance</string>
@@ -28,5 +27,19 @@
     <string name="Langue">Langue</string>
     <string name="Français">Français</string>
     <string name="Anglais">Anglais</string>
+    <string name="Ajouterphoto">Ajouter photo</string>
+    <string name="Pasinfo">Info non précisé</string>
+    <string name="Changer">Changer</string>
+    <string name="Male">M</string>
+    <string name="Female">F</string>
+    <string name="Bi">Bi</string>
+    <string name="Gay">Gay</string>
+    <string name="Sinscrire">S\'inscrire</string>
+    <string name="Changermotdepasse">Changer mot de passe</string>
+    <string name="Menu">Menu</string>
+    <string name="Profil">Profil</string>
+    <string name="Titrechangerpsw">Changement de mot de passe</string>
+    <string name="Ancienpsw">Ancien mot de passe</string>
+    <string name="Nouveaupsw">Nouveau mot de passe</string>
+    <string name="Confirmerpsw">Confirmer mot de passe</string>
 </resources>
-
