@@ -14,6 +14,13 @@
     <string name="parametersButton">Paramètres et Infos</string>
     <string name="NameVisibility">Visibilité du nom</string>
     <string name="PhotoVisibility">Visibilité de la photo</string>
+    <string name="VisibiliteDeLaVille">Visibilité de la ville</string>
+    <string name="VisibiliteDuTelephone">Visibilité du téléphone</string>
+    <string name="VisibiliteDuMail">Visibilité du mail</string>
+    <string name="VisibiliteDeLorientation">Visibilité de l\'orientation</string>
+    <string name="VisibiliteDeMesDisponibilites">Visibilité de mes disponibilités</string>
+    <string name="VisibiliteDeLaCouleurDeMesYeux">Visibilité de la couleur de mes yeux</string>
+    <string name="VisibiliteDesDonneesSurMesCheveux">Visibilité des données sur mes cheveux</string>
     <string-array name="VisibilityOffer">
         <item>Moi uniquement</item>
         <item>Amis</item>
@@ -81,5 +88,9 @@
     <string name="Ancienpsw">Ancien mot de passe</string>
     <string name="Nouveaupsw">Nouveau mot de passe</string>
     <string name="Confirmerpsw">Confirmer mot de passe</string>
+    <string name="Etoile">********</string>
+    <string name="Confirmer">Confirmer</string>
     <string name="PreferenceDeVisibilite">Préférence de visibilité</string>
+    <string name="InfoCachee">Info cachée</string>
+    <string name="ProfilDunAmi">Profil d\'un ami</string>
 </resources>
