@@ -37,7 +37,7 @@
             android:layout_height="0dp"
             android:id="@+id/editText12"
             android:layout_gravity="center_horizontal"
-            android:hint="@string/EnterLogin"
+            android:hint="@string/LoginA"
             android:layout_weight="0.06" />
 
         <EditText
@@ -47,7 +47,7 @@
             android:ems="10"
             android:id="@+id/editText13"
             android:layout_gravity="center_horizontal"
-            android:hint="@string/EnterPswd"
+            android:hint="@string/MotdepasseA"
             android:layout_weight="0.06" />
 
         <EditText
@@ -57,7 +57,7 @@
             android:ems="10"
             android:id="@+id/editText14"
             android:layout_gravity="center_horizontal"
-            android:hint="@string/EnterPswd"
+            android:hint="@string/MonfirmerMotdepasseA"
             android:layout_weight="0.06" />
 
         <EditText
@@ -66,7 +66,7 @@
             android:id="@+id/editText11"
             android:layout_gravity="center_horizontal"
             android:inputType="textPersonName"
-            android:hint="@string/Prenom"
+            android:hint="@string/PrenomA"
             android:layout_weight="0.06" />
 
         <EditText
@@ -76,7 +76,7 @@
             android:ems="10"
             android:id="@+id/editText6"
             android:layout_gravity="center_horizontal"
-            android:hint="@string/Nom"
+            android:hint="@string/NomA"
             android:layout_weight="0.06" />
 
         <EditText
@@ -86,7 +86,7 @@
             android:ems="10"
             android:id="@+id/editText7"
             android:layout_gravity="center_horizontal"
-            android:hint="@string/Datedenaissance"
+            android:hint="@string/DatedenaissanceA"
             android:layout_weight="0.06" />
 
         <EditText
@@ -122,7 +122,7 @@
                 android:text="@string/Sexe"
                 android:id="@+id/textView3"
                 android:autoText="false"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textColor="#000000" />
 
             <RadioButton
@@ -136,7 +136,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="F"
+                android:text="@string/Female"
                 android:id="@+id/radioButton5"
                 android:checked="true" />
 
@@ -169,7 +169,7 @@
                 android:text="@string/Orientation"
                 android:id="@+id/textView4"
                 android:autoText="false"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textColor="#000000" />
 
             <RadioButton
@@ -207,7 +207,7 @@
                 android:text="@string/Cheveux"
                 android:id="@+id/textView6"
                 android:textColor="#000000"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textAlignment="center" />
 
             <Spinner
@@ -217,7 +217,7 @@
                 android:layout_gravity="center_vertical" />
 
             <Spinner
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/spinner2"
                 android:layout_weight="1" />
@@ -237,7 +237,7 @@
                 android:text="@string/Yeux"
                 android:id="@+id/textView7"
                 android:textColor="#000000"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textAlignment="center"
                 android:layout_weight="0.00" />
 
@@ -263,7 +263,7 @@
                 android:id="@+id/textView5"
                 android:autoText="false"
                 android:textColor="#000000"
-                android:textSize="18dp" />
+                android:textSize="18sp" />
 
             <RadioButton
                 android:layout_width="wrap_content"
@@ -286,7 +286,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:text="@string/Sinscrire"
+            android:text="@string/SignUpButton"
             android:id="@+id/button10"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.06" />
