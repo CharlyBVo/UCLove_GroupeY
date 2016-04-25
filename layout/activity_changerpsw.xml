@@ -6,7 +6,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="match_parent"
@@ -17,12 +17,12 @@
             android:gravity="center"
             android:password="false"
             android:textColor="@color/Menu"
-            android:textSize="26dp" />
+            android:textSize="26sp" />
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="wrap_content" >
 
             <LinearLayout
                 android:orientation="vertical"
@@ -35,7 +35,7 @@
                     android:text="@string/Ancienpsw"
                     android:id="@+id/textView42"
                     android:layout_gravity="left"
-                    android:textSize="18dp"
+                    android:textSize="18sp"
                     android:textColor="@color/black"
                     android:textAlignment="center"
                     android:paddingLeft="30dp" />
@@ -46,7 +46,7 @@
                     android:text="@string/Nouveaupsw"
                     android:id="@+id/textView43"
                     android:layout_gravity="left"
-                    android:textSize="18dp"
+                    android:textSize="18sp"
                     android:textColor="@color/black"
                     android:textAlignment="center"
                     android:paddingLeft="30dp" />
@@ -57,7 +57,7 @@
                     android:text="@string/Confirmerpsw"
                     android:id="@+id/textView44"
                     android:layout_gravity="left"
-                    android:textSize="18dp"
+                    android:textSize="18sp"
                     android:textColor="@color/black"
                     android:textAlignment="center"
                     android:paddingLeft="30dp" />
@@ -72,25 +72,32 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:id="@+id/editText25"
-                    android:hint="@string/Pasinfo"
+                    android:hint="@string/Etoile"
                     android:layout_gravity="center_horizontal" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:id="@+id/editText26"
-                    android:hint="@string/Pasinfo"
+                    android:hint="@string/Etoile"
                     android:layout_gravity="center_horizontal" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:id="@+id/editText27"
-                    android:hint="@string/Pasinfo"
+                    android:hint="@string/Etoile"
                     android:layout_gravity="center_horizontal" />
             </LinearLayout>
 
         </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Confirmer"
+            android:id="@+id/button16"
+            android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
 </ScrollView>
