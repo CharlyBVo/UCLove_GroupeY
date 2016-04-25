@@ -92,6 +92,18 @@ public class UtilisateurManager {
         return result;
     }
 
+     public int modMDP(Utilisateur util) {
+        // modification d'un enregistrement
+        // valeur de retour : (int) nombre de lignes affectées par la requête
+
+        ContentValues values = new ContentValues();
+        values.put(KEY_MDP_UTILISATEUR, util.getMotDePasse());
+
+        String where = KEY_LOGIN_UTILISATEUR+" = ?";
+        String[] whereArgs = {util.getLogin()+""};
+
+        return db.update(TABLE_NAME, values, where, whereArgs);
+    }
     /*public int modUtilisateur(Utilisateur util) {
         // modification d'un enregistrement
         // valeur de retour : (int) nombre de lignes affectées par la requête
