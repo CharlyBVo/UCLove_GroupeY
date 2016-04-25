@@ -25,6 +25,10 @@ public class ProfilActivity  extends Activity {
         TextView Pseudo = (TextView) findViewById(R.id.textView36);
         LogUtil = getIntent().getStringExtra("LogUtil");
         Pseudo.setText(LogUtil);
+        utilm = new UtilisateurManager(this);
+        utilm.open();
+        a=utilm.getMainUtilisateur(LogUtil);
+        utilm.close();
 
         ChangePswd.setOnClickListener(new View.OnClickListener() {
             @Override
