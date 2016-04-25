@@ -12,6 +12,13 @@
     <string name="ResearchButton">Recherche</string>
     <string name="myHistoryButton">Historique</string>
     <string name="parametersButton">Paramètres et Infos</string>
+     <string name="NameVisibility">Visibilité du nom</string>
+    <string name="PhotoVisibility">Visibilité de la photo</string>
+    <string-array name="VisibilityOffer">
+        <item>Moi uniquement</item>
+        <item>Amis</item>
+        <item>Public</item>
+    </string-array>
     <string name="Prenom">Prénom</string>
     <string name="Nom">Nom</string>
     <string name="Datedenaissance">Date de naissance</string>
