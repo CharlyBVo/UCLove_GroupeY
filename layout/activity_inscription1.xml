@@ -11,7 +11,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.27"
+            android:layout_weight="0.06"
             android:layout_gravity="center_horizontal">
 
             <ImageView
@@ -26,88 +26,98 @@
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="179dp"
-            android:layout_height="wrap_content"
-            android:text="ajouter photo"
+            android:layout_height="0dp"
+            android:text="@string/Ajouterphoto"
             android:id="@+id/button11"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.06" />
 
         <EditText
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:id="@+id/editText12"
             android:layout_gravity="center_horizontal"
-            android:hint="@string/EnterLogin" />
+            android:hint="@string/EnterLogin"
+            android:layout_weight="0.06" />
 
         <EditText
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/editText13"
             android:layout_gravity="center_horizontal"
-            android:hint="@string/EnterPswd" />
+            android:hint="@string/EnterPswd"
+            android:layout_weight="0.06" />
 
         <EditText
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/editText14"
             android:layout_gravity="center_horizontal"
-            android:hint="@string/EnterPswd" />
+            android:hint="@string/EnterPswd"
+            android:layout_weight="0.06" />
 
         <EditText
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:id="@+id/editText11"
             android:layout_gravity="center_horizontal"
             android:inputType="textPersonName"
-            android:hint="@string/Prenom" />
+            android:hint="@string/Prenom"
+            android:layout_weight="0.06" />
 
         <EditText
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/editText6"
             android:layout_gravity="center_horizontal"
-            android:hint="@string/Nom" />
+            android:hint="@string/Nom"
+            android:layout_weight="0.06" />
 
         <EditText
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:inputType="date"
             android:ems="10"
             android:id="@+id/editText7"
             android:layout_gravity="center_horizontal"
-            android:hint="@string/Datedenaissance" />
+            android:hint="@string/Datedenaissance"
+            android:layout_weight="0.06" />
 
         <EditText
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:inputType="phone"
             android:ems="10"
             android:id="@+id/editText8"
             android:layout_gravity="center_horizontal"
-            android:hint="@string/Telephone" />
+            android:hint="@string/Telephone"
+            android:layout_weight="0.06" />
 
         <EditText
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:inputType="textEmailAddress"
             android:ems="10"
             android:id="@+id/editText9"
             android:layout_gravity="center_horizontal"
-            android:hint="@string/Email" />
+            android:hint="@string/Email"
+            android:layout_weight="0.06" />
 
         <RadioGroup
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:orientation="horizontal"
-            android:layout_gravity="center_horizontal" >
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.06">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="@string/Sexe"
                 android:id="@+id/textView3"
@@ -118,7 +128,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="M"
+                android:text="@string/Male"
                 android:id="@+id/radioButton4"
                 android:layout_gravity="right"
                 android:checked="true" />
@@ -140,16 +150,18 @@
 
         <EditText
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:id="@+id/editText10"
             android:layout_gravity="center_horizontal"
-            android:hint="@string/Ville" />
+            android:hint="@string/Ville"
+            android:layout_weight="0.06" />
 
         <RadioGroup
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:orientation="horizontal"
-            android:layout_gravity="center_horizontal" >
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.06">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -171,14 +183,14 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bi"
+                android:text="@string/Bi"
                 android:id="@+id/radioButton8"
                 android:checked="true" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gay"
+                android:text="@string/Gay"
                 android:id="@+id/radioButton9"
                 android:checked="false" />
         </RadioGroup>
@@ -186,7 +198,8 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="0.06">
 
             <TextView
                 android:layout_width="136dp"
@@ -213,9 +226,10 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
-            android:weightSum="1">
+            android:weightSum="1"
+            android:layout_weight="0.06">
 
             <TextView
                 android:layout_width="137dp"
@@ -237,9 +251,10 @@
 
         <RadioGroup
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:orientation="horizontal"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.06">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -270,10 +285,11 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="S&apos;inscrire"
+            android:layout_height="0dp"
+            android:text="@string/Sinscrire"
             android:id="@+id/button10"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.06" />
 
     </LinearLayout>
 </ScrollView>
