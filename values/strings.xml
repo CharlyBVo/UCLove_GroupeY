@@ -93,4 +93,8 @@
     <string name="PreferenceDeVisibilite">Préférence de visibilité</string>
     <string name="InfoCachee">Info cachée</string>
     <string name="ProfilDunAmi">Profil d\'un ami</string>
+    <string name="Rencontre">Rencontre</string>
+    <string name="Proposer">Proposer</string>
+    <string name="DemandeDeRendezVous">Demande de rendez-vous</string>
+    <string name="PropositionDeRencontre">Proposition de rencontre</string>
 </resources>
