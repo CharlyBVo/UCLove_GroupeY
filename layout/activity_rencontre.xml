@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="false">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Rencontre"
+            android:id="@+id/textView67"
+            android:layout_gravity="center_horizontal"
+            android:textSize="65sp"
+            android:gravity="center"
+            android:password="false"
+            android:textColor="@color/Menu" />
+
+        <CalendarView
+            android:layout_width="match_parent"
+            android:layout_height="378dp"
+            android:id="@+id/calendarView"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Spinner
+                android:layout_width="192dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner10" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Proposer"
+                    android:id="@+id/button18"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="243dp"
+            android:layout_height="wrap_content"
+            android:text="@string/myHistoryButton"
+            android:id="@+id/button19"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="243dp"
+            android:layout_height="wrap_content"
+            android:text="@string/DemandeDeRendezVous"
+            android:id="@+id/button17"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+</ScrollView>
