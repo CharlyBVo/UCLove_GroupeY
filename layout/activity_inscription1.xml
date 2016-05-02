@@ -1,323 +1,295 @@
-package com.example.charles_henry.testquimarche;
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
-import android.net.Uri;
-import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="vertical">
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.06"
+            android:layout_gravity="center_horizontal">
 
-/**
- * Created by Antoine on 01-05-16.
- */
-public class InscriptionActivity extends Activity {
-    public String LogUtil;
-    Utilisateur a;
-    public Utilisateur MainUser ;
-    Date temp;
-    Bitmap bmcool;
-    String EnterLangue;
-    String EnterOrientation;
-    String EnterGenre;
-    UtilisateurManager utilm;
-    ImageView ivImage;
-    byte[] arrayphoto;
-    int REQUEST_CAMERA = 0, SELECT_FILE = 1;
-    Uri imageUri;
-    String fdestination;
-    final UtilisateurManager TestManagUtil =new UtilisateurManager(this);
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inscription1);
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView2"
+                android:src="@drawable/logo"
+                android:layout_gravity="center" />
 
-        ivImage= (ImageView) findViewById(R.id.imageView2);
-        final EditText EnterLogin = (EditText) findViewById(R.id.editText12);
-        final EditText EnterPassword = (EditText) findViewById(R.id.editText13);
-        final EditText EnterConfirmPassword = (EditText) findViewById(R.id.editText14);
-        final EditText EnterPrenom = (EditText) findViewById(R.id.editText11);
-        final EditText EnterNom = (EditText) findViewById(R.id.editText6);
-        final EditText EnterDateDeNaissance = (EditText) findViewById(R.id.editText7);
-        final EditText EnterTelephone = (EditText) findViewById(R.id.editText8);
-        final EditText EnterEmail = (EditText) findViewById(R.id.editText9);
-        final EditText EnterVille = (EditText) findViewById(R.id.editText10);
+        </FrameLayout>
 
-        final Spinner Cheveux1 = (Spinner) findViewById(R.id.spinner);
-        final Spinner Cheveux2 = (Spinner) findViewById(R.id.spinner2);
-        final Spinner yeux = (Spinner) findViewById(R.id.spinner3);
-        Button butAddIm = (Button) findViewById(R.id.button11);
-        Button butInscr = (Button) findViewById(R.id.button10);
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="179dp"
+            android:layout_height="0dp"
+            android:text="@string/Ajouterphoto"
+            android:id="@+id/button11"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.06" />
 
-        RadioGroup Sexe = (RadioGroup) findViewById(R.id.radiogroup4);
-        RadioGroup Orientation = (RadioGroup) findViewById(R.id.radiogroup5);
-        RadioGroup Langue = (RadioGroup) findViewById(R.id.radiogroup5);
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:id="@+id/editText12"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/LoginA"
+            android:layout_weight="0.06" />
 
-        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
-                R.array.CheveuxTaille, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
-        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
-        Cheveux1.setAdapter(adapter1);
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/editText13"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/MotdepasseA"
+            android:layout_weight="0.06" />
 
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
-                R.array.CheveuxCouleur, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
-        Cheveux2.setAdapter(adapter2);
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/editText14"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/MonfirmerMotdepasseA"
+            android:layout_weight="0.06" />
 
-        ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this,
-                R.array.YeuxCouleur, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
-        adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
-        yeux.setAdapter(adapter3);
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:id="@+id/editText11"
+            android:layout_gravity="center_horizontal"
+            android:inputType="textPersonName"
+            android:hint="@string/PrenomA"
+            android:layout_weight="0.06" />
 
-        butInscr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                boolean ok = true;
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText6"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/NomA"
+            android:layout_weight="0.06" />
 
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/editText7"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/DatedenaissanceA"
+            android:layout_weight="0.06" />
 
-                if (EnterLogin.getText().toString() == null) {
-                    Toast.makeText(InscriptionActivity.this, "Veuillez entrer un login", Toast.LENGTH_SHORT).show();
-                    ok = false;
-                }
-                else {
-                    TestManagUtil.open();
-                    MainUser = TestManagUtil.getMainUtilisateur(EnterLogin.getText().toString());
-                    TestManagUtil.close();
-                if (EnterLogin.getText().toString().length() < 6) {
-                    Toast.makeText(InscriptionActivity.this, "Veuillez entrer un login de minimum 5 caractères", Toast.LENGTH_SHORT).show();
-                    ok = false;
-                }
-                else if (MainUser !=null){
-                    Toast.makeText(InscriptionActivity.this, "Login déja existant", Toast.LENGTH_SHORT).show();
-                    ok = false;
-                }
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/editText8"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/Telephone"
+            android:layout_weight="0.06" />
 
-                    else if (EnterPassword.getText().toString() == null) {
-                        Toast.makeText(InscriptionActivity.this, "Veuillez entrer un mot de passe", Toast.LENGTH_SHORT).show();
-                    ok = false;
-                    } else if (EnterPassword.getText().toString().length() < 7) {
-                        Toast.makeText(InscriptionActivity.this, "Veuillez entrer un mot de passe de minimum 6 caractères", Toast.LENGTH_SHORT).show();
-                    ok = false;
-                    } else if (EnterConfirmPassword.getText().toString() != EnterPassword.getText().toString()) {
-                        Toast.makeText(InscriptionActivity.this, "Les mots de passe ne correspondent pas", Toast.LENGTH_SHORT).show();
-                    ok = false;
-                    } else if (EnterPrenom.getText().toString() == null) {
-                        Toast.makeText(InscriptionActivity.this, "Veuillez entrer un prénom", Toast.LENGTH_SHORT).show();
-                    ok = false;
-                    } else if (EnterPrenom.getText().toString().length() < 2) {
-                        Toast.makeText(InscriptionActivity.this, "Veuillez entrer un prénom de minimum un caractère", Toast.LENGTH_SHORT).show();
-                    ok = false;
-                    } else if (EnterDateDeNaissance.getText().toString() != null) {
-                        try {
-                            temp = new SimpleDateFormat("dd/MM/yyyy").parse(EnterDateDeNaissance.getText().toString());
-                            // Date temp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(dateNoConvert);
-                        } catch (Exception e) {
-                            Toast.makeText(InscriptionActivity.this, "Veuillez entrer votre de naissance au format JJ/MM/AAAA", Toast.LENGTH_SHORT).show();
-                            ok = false;
-                        }
-                    } else if (EnterEmail.getText().toString() != null) {
-                        if (!EnterEmail.getText().toString().contains("@")) {
-                            Toast.makeText(InscriptionActivity.this, "Veuillez entrer un mail valide ou ne pas le renseigner", Toast.LENGTH_SHORT).show();
-                            ok = false;
-                        }
-                    }}
-                    if (ok) {
-                        if (((RadioButton) findViewById(R.id.radioButton10)).isChecked()) {
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/editText9"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/Email"
+            android:layout_weight="0.06" />
 
-                            EnterLangue = "Français";
-                        } else if (((RadioButton) findViewById(R.id.radioButton11)).isChecked()) {
-                            EnterLangue = "Anglais";
-                        }
+        <RadioGroup
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.06">
 
-                        if (((RadioButton) findViewById(R.id.radioButton4)).isChecked()) {
-                            EnterGenre = "M";
-                        } else if (((RadioButton) findViewById(R.id.radioButton5)).isChecked()) {
-                            EnterGenre = "F";
-                        } else if (((RadioButton) findViewById(R.id.radioButton6)).isChecked()) {
-                            EnterGenre = "Autre";
-                        }
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Sexe"
+                android:id="@+id/textView3"
+                android:autoText="false"
+                android:textSize="18sp"
+                android:textColor="#000000" />
 
-                        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                        if (bmcool != null) {
-                            bmcool.compress(Bitmap.CompressFormat.PNG, 0, stream);
-                            arrayphoto = stream.toByteArray();
-                        }
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Male"
+                android:id="@+id/radioButton4"
+                android:layout_gravity="right"
+                android:checked="true" />
 
-                        if (((RadioButton) findViewById(R.id.radioButton7)).isChecked()) {
-                            EnterOrientation = "Hétéro";
-                        } else if (((RadioButton) findViewById(R.id.radioButton8)).isChecked()) {
-                            EnterOrientation = "Bi";
-                        } else if (((RadioButton) findViewById(R.id.radioButton9)).isChecked()) {
-                            EnterOrientation = "Homo";
-                        }
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Female"
+                android:id="@+id/radioButton5"
+                android:checked="true" />
 
-                        a = new Utilisateur(EnterLogin.getText().toString(), EnterPassword.getText().toString(),
-                                EnterNom.getText().toString(), EnterPrenom.getText().toString(), EnterVille.getText().toString(),
-                                temp, yeux.getSelectedItem().toString(),
-                                Cheveux1.getSelectedItem().toString() + " " + Cheveux2.getSelectedItem().toString(),
-                                EnterTelephone.getText().toString(), EnterLangue, EnterEmail.getText().toString(), EnterGenre,
-                                arrayphoto, EnterOrientation);
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Autresexe"
+                android:id="@+id/radioButton6"
+                android:checked="true" />
+        </RadioGroup>
 
-                        utilm.open();
-                        utilm.modUtilisateur(a);
-                        utilm.close();
-                        Toast.makeText(InscriptionActivity.this, "Bienvenue", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:id="@+id/editText10"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/Ville"
+            android:layout_weight="0.06" />
 
-            );
-            butAddIm.setOnClickListener(new View.OnClickListener()
+        <RadioGroup
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.06">
 
-            {
-                @Override
-                public void onClick (View arg0){
-                selectImage();
-            }
-        });
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Orientation"
+                android:id="@+id/textView4"
+                android:autoText="false"
+                android:textSize="18sp"
+                android:textColor="#000000" />
 
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Hetero"
+                android:id="@+id/radioButton7"
+                android:layout_gravity="right"
+                android:checked="true" />
 
-    }
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Bi"
+                android:id="@+id/radioButton8"
+                android:checked="true" />
 
-    private void selectImage() {
-        final CharSequence[] items = { "Take Photo", "Choose from Library", "Cancel" };
-        AlertDialog.Builder builder = new AlertDialog.Builder(InscriptionActivity.this);
-        builder.setTitle("Add Photo!");
-        builder.setItems(items, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int item) {
-                if (items[item].equals("Take Photo")) {
-                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    startActivityForResult(intent, REQUEST_CAMERA);
-                } else if (items[item].equals("Choose from Library")) {
-                    Intent intent = new Intent(
-                            Intent.ACTION_PICK,
-                            android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                    intent.setType("image/*");
-                    startActivityForResult(
-                            Intent.createChooser(intent, "Select File"),
-                            SELECT_FILE);
-                } else if (items[item].equals("Cancel")) {
-                    dialog.dismiss();
-                }
-            }
-        });
-        builder.show();
-    }
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Gay"
+                android:id="@+id/radioButton9"
+                android:checked="false" />
+        </RadioGroup>
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.06">
 
-        if (resultCode == Activity.RESULT_OK) {
-            if (requestCode == SELECT_FILE)
-                onSelectFromGalleryResult(data);
-            else if (requestCode == REQUEST_CAMERA)
-                onCaptureImageResult(data);
-        }
-    }
+            <TextView
+                android:layout_width="136dp"
+                android:layout_height="match_parent"
+                android:text="@string/Cheveux"
+                android:id="@+id/textView6"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textAlignment="center" />
 
-    private void onCaptureImageResult(Intent data) {
-        Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
-        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-        thumbnail.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
+            <Spinner
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                android:layout_gravity="center_vertical" />
 
-        File destination = new File(Environment.getExternalStorageDirectory(),
-                System.currentTimeMillis() + ".jpg");
-        fdestination = destination.toString();
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner2"
+                android:layout_weight="1" />
+        </LinearLayout>
 
-        FileOutputStream fo;
-        try {
-            destination.createNewFile();
-            fo = new FileOutputStream(destination);
-            fo.write(bytes.toByteArray());
-            fo.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:weightSum="1"
+            android:layout_weight="0.06">
 
-        ivImage.setImageBitmap(thumbnail);
-        if(thumbnail.getHeight()>thumbnail.getWidth()){
+            <TextView
+                android:layout_width="137dp"
+                android:layout_height="match_parent"
+                android:text="@string/Yeux"
+                android:id="@+id/textView7"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:layout_weight="0.00" />
 
-            Matrix matrix = new Matrix();
-            matrix.postRotate(90);
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner3"
+                android:layout_gravity="bottom" />
 
-            thumbnail = Bitmap.createBitmap(thumbnail, 0, 0, thumbnail.getWidth(),
-                    thumbnail.getHeight(), matrix, true);
-        }
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        thumbnail.compress(Bitmap.CompressFormat.PNG, 0, stream);
-        bmcool = thumbnail;
-    }
+        </LinearLayout>
 
-    @SuppressWarnings("deprecation")
-    private void onSelectFromGalleryResult(Intent data) {
-        Uri selectedImageUri = data.getData();
-        String[] projection = { MediaStore.MediaColumns.DATA };
-        Cursor cursor = managedQuery(selectedImageUri, projection, null, null,
-                null);
-        int column_index = cursor.getColumnIndexOrThrow(MediaStore.MediaColumns.DATA);
-        cursor.moveToFirst();
+        <RadioGroup
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.06">
 
-        String selectedImagePath = cursor.getString(column_index);
-        fdestination = selectedImagePath;
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Langue"
+                android:id="@+id/textView5"
+                android:autoText="false"
+                android:textColor="#000000"
+                android:textSize="18sp" />
 
-        Bitmap bm;
-        BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inJustDecodeBounds = true;
-        BitmapFactory.decodeFile(selectedImagePath, options);
-        final int REQUIRED_SIZE = 200;
-        int scale = 1;
-        while (options.outWidth / scale / 2 >= REQUIRED_SIZE
-                && options.outHeight / scale / 2 >= REQUIRED_SIZE)
-            scale *= 2;
-        options.inSampleSize = scale;
-        options.inJustDecodeBounds = false;
-        bm = BitmapFactory.decodeFile(selectedImagePath, options);
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Français"
+                android:id="@+id/radioButton10"
+                android:layout_gravity="right"
+                android:checked="false" />
 
-        if(bm.getHeight()>bm.getWidth()){
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Anglais"
+                android:id="@+id/radioButton11"
+                android:checked="true"
+                android:layout_gravity="bottom" />
 
-            Matrix matrix = new Matrix();
-            matrix.postRotate(90);
+        </RadioGroup>
 
-            bm = Bitmap.createBitmap(bm, 0, 0, bm.getWidth(),
-                    bm.getHeight(), matrix, true);
-        }
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        bm.compress(Bitmap.CompressFormat.PNG, 0, stream);
-        ivImage.setImageBitmap(bm);
-        bmcool=bm;
-    }
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="@string/SignUpButton"
+            android:id="@+id/button10"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.06" />
 
-    }
+    </LinearLayout>
+</ScrollView>
