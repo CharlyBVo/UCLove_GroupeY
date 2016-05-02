@@ -1,106 +1,107 @@
 <resources>
     <string name="app_name">UcLove</string>
-    <string name="connectButton">Connect</string>
+    <string name="connectButton">Se connecter</string>
     <string name="EnterLogin">Login</string>
-    <string name="EnterPswd">Password</string>
-    <string name="ConnectButton">Connect</string>
-    <string name="SignUpButton">Register</string>
-    <string name="myProfileButton">Profile</string>
-    <string name="myFriendsButton">Friends</string>
-    <string name="myMeetingButton">Meetings</string>
+    <string name="EnterPswd">Mot de passe</string>
+    <string name="ConnectButton">Se connecter</string>
+    <string name="SignUpButton">S\'inscrire</string>
+    <string name="myProfileButton">Mon profil</string>
+    <string name="myFriendsButton">Mes amis</string>
+    <string name="myMeetingButton">Rencontres</string>
     <string name="myMessagesButton">Messages</string>
-    <string name="ResearchButton">Search</string>
-    <string name="myHistoryButton">Logs</string>
-    <string name="parametersButton">Settings</string>
-    <string name="NameVisibility">Name visibility</string>
-    <string name="PhotoVisibility">Picture visibility</string>
-    <string name="VisibiliteDeLaVille">City visibility</string>
-    <string name="VisibiliteDuTelephone">Phone visibility</string>
-    <string name="VisibiliteDuMail">Mail visibility</string>
-    <string name="VisibiliteDeLorientation">Gender visibility</string>
-    <string name="VisibiliteDeMesDisponibilites">Disponibility visibility</string>
-    <string name="VisibiliteDeLaCouleurDeMesYeux">Eye color visibility</string>
-    <string name="VisibiliteDesDonneesSurMesCheveux">Hair visibility</string>
+    <string name="ResearchButton">Recherche</string>
+    <string name="myHistoryButton">Historique</string>
+    <string name="parametersButton">Paramètres et Infos</string>
+    <string name="NameVisibility">Visibilité du nom</string>
+    <string name="PhotoVisibility">Visibilité de la photo</string>
+    <string name="VisibiliteDeLaVille">Visibilité de la ville</string>
+    <string name="VisibiliteDuTelephone">Visibilité du téléphone</string>
+    <string name="VisibiliteDuMail">Visibilité du mail</string>
+    <string name="VisibiliteDeLorientation">Visibilité de l\'orientation</string>
+    <string name="VisibiliteDeMesDisponibilites">Visibilité de mes disponibilités</string>
+    <string name="VisibiliteDeLaCouleurDeMesYeux">Visibilité de la couleur de mes yeux</string>
+    <string name="VisibiliteDesDonneesSurMesCheveux">Visibilité des données sur mes cheveux</string>
     <string-array name="VisibilityOffer">
-        <item>Only me</item>
-        <item>Friends</item>
+        <item>Moi uniquement</item>
+        <item>Amis</item>
         <item>Public</item>
     </string-array>
     <string name="LoginA">Login*</string>
-    <string name="MotdepasseA">Password*</string>
-    <string name="MonfirmerMotdepasseA">Confirm password*</string>
-    <string name="Prenom">First name</string>
-    <string name="PrenomA">First name*</string>
-    <string name="Nom">Name</string>
-    <string name="NomA">Name*</string>
-    <string name="Datedenaissance">Birth date</string>
-    <string name="DatedenaissanceA">Birth date*</string>
-    <string name="Telephone">Phone number</string>
-    <string name="Email">Mail</string>
-    <string name="Sexe">Sex</string>
+    <string name="MotdepasseA">Mot de passe*</string>
+    <string name="MonfirmerMotdepasseA">Confirmer mot de passe*</string>
+    <string name="Prenom">Prénom</string>
+    <string name="PrenomA">Prénom*</string>
+    <string name="Nom">Nom</string>
+    <string name="NomA">Nom*</string>
+    <string name="Datedenaissance">Date de naissance</string>
+    <string name="DatedenaissanceA">Date de naissance*</string>
+    <string name="Telephone">Téléphone</string>
+    <string name="Email">E-mail</string>
+    <string name="Sexe">Sexe</string>
     <string name="Male">M</string>
     <string name="Female">F</string>
-    <string name="Autresexe">Other</string>
-    <string name="Ville">City</string>
-    <string name="Orientation">Gender</string>
-    <string name="Hetero">Straight</string>
+    <string name="Autresexe">Autre</string>
+    <string name="Ville">Ville</string>
+    <string name="Orientation">Orientation</string>
+    <string name="Hetero">Hétéro</string>
     <string name="Bi">Bi</string>
     <string name="Gay">Gay</string>
-    <string name="Cheveux">Hair</string>
+    <string name="Cheveux">Cheveux</string>
     <string-array name="CheveuxTaille">
-        <item>Not specified</item>
-        <item>Bald</item>
-        <item>Short</item>
-        <item>Half long</item>
+        <item>Pas spécifié</item>
+        <item>Chauve</item>
+        <item>Court</item>
+        <item>Mi-long</item>
         <item>Long</item>
     </string-array>
     <string-array name="CheveuxCouleur">
-        <item>Not specified</item>
+        <item>Pas spécifié</item>
         <item>Blond</item>
-        <item>Dark blond</item>
-        <item>Red</item>
-        <item>Bruin</item>
-        <item>Black</item>
-        <item>Green</item>
-        <item>Blue</item>
+        <item>Châtain</item>
+        <item>Roux</item>
+        <item>Brun</item>
+        <item>Noir</item>
+        <item>Vert</item>
+        <item>Bleu</item>
         <item>Rose</item>
     </string-array>
-    <string name="Yeux">Eyes</string>
+    <string name="Yeux">Yeux</string>
     <string-array name="YeuxCouleur">
-        <item>Not specified</item>
-        <item>blue</item>
-        <item>Bruin</item>
-        <item>Black</item>
-        <item>Grey</item>
-        <item>Red</item>
-        <item>Green</item>
+        <item>Pas spécifié</item>
+        <item>Bleu</item>
+        <item>Brun</item>
+        <item>Noir</item>
+        <item>Gris</item>
+        <item>Rouge</item>
+        <item>Vert</item>
     </string-array>
-    <string name="Langue">Language</string>
-    <string name="Français">French</string>
-    <string name="Anglais">English</string>
-    <string name="Ajouterphoto">Add picture</string>
-    <string name="Pasinfo">Not specified</string>
-    <string name="Changer">Change</string>
-    <string name="Changermotdepasse">Change password</string>
+    <string name="Langue">Langue</string>
+    <string name="Français">Français</string>
+    <string name="Anglais">Anglais</string>
+    <string name="Ajouterphoto">Ajouter photo</string>
+    <string name="Pasinfo">Info non précisé</string>
+    <string name="Changer">Changer</string>
+    <string name="Changermotdepasse">Changer mot de passe</string>
     <string name="Menu">Menu</string>
-    <string name="Profil">Profile</string>
-    <string name="Titrechangerpsw">password change</string>
-    <string name="Ancienpsw">Old password</string>
-    <string name="Nouveaupsw">New password</string>
-    <string name="Confirmerpsw">Confirm password</string>
+    <string name="Profil">Profil</string>
+    <string name="Titrechangerpsw">Changement de mot de passe</string>
+    <string name="Ancienpsw">Ancien mot de passe</string>
+    <string name="Nouveaupsw">Nouveau mot de passe</string>
+    <string name="Confirmerpsw">Confirmer mot de passe</string>
     <string name="Etoile">********</string>
-    <string name="Confirmer">Confirm</string>
-    <string name="PreferenceDeVisibilite">Visibility preference</string>
-    <string name="InfoCachee">Hided info</string>
-    <string name="ProfilDunAmi">Friend profile</string>
-    <string name="Rencontre">Meeting</string>
-    <string name="Proposer">Propose</string>
-    <string name="DemandeDeRendezVous">appointment request </string>
-    <string name="PropositionDeRencontre">Meeting proposal</string>
+    <string name="Confirmer">Confirmer</string>
+    <string name="PreferenceDeVisibilite">Préférence de visibilité</string>
+    <string name="InfoCachee">Info cachée</string>
+    <string name="ProfilDunAmi">Profil d\'un ami</string>
+    <string name="Rencontre">Rencontre</string>
+    <string name="Proposer">Proposer</string>
+    <string name="DemandeDeRendezVous">Demande de rendez-vous</string>
+    <string name="PropositionDeRencontre">Proposition de rencontre</string>
     <string name="Message">Message</string>
-    <string name="TrierPar">Sort by</string>
-    <string name="NewMessage">New Message</string>
+    <string name="TrierPar">Trier par</string>
+    <string name="NewMessage">Nouveau Message</string>
     <string name="Conversation">Conversation</string>
-    <string name="Envoyer">Send</string>
-    <string name="Destinataire">Send to</string>
+    <string name="Envoyer">Envoyer</string>
+    <string name="Destinataire">Destinataire</string>
+    <string name="requestButton">Requête</string>
 </resources>
