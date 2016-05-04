@@ -14,7 +14,7 @@ import java.util.Date;
 
 public class UtilisateurManager {
 
-    private static final String TABLE_NAME = "Utilisateur";
+    public static final String TABLE_NAME = "Utilisateur";
     public static final String KEY_LOGIN_UTILISATEUR="Login";
     public static final String KEY_MDP_UTILISATEUR="Mot_de_passe";
     public static final String KEY_PRENOM_UTILISATEUR="Prenom";
@@ -74,7 +74,7 @@ public class UtilisateurManager {
         values.put(KEY_VILLE_UTILISATEUR,util.getVille());
         values.put(KEY_ORIENTATION_UTILISATEUR,util.getOrientation());
         values.put(KEY_TELEPHONE_UTILISATEUR,util.getTelephone());
-        //values.put(KEY_PHOTO_UTILISATEUR,null);
+        values.put(KEY_PHOTO_UTILISATEUR,util.getPhoto());
         values.put(KEY_YEUX_UTILISATEUR, util.getYeux());
 
         //Gestion de la date de naissance
@@ -83,16 +83,11 @@ public class UtilisateurManager {
 
         values.put(KEY_DATE_NAISSANCE_UTILISATEUR, dateString);
 
-        long result=db.insert(TABLE_NAME,null,values);
-        db.execSQL("UPDATE "+TABLE_NAME+" SET "+KEY_PHOTO_UTILISATEUR+" ='"+util.getPhoto()+"' WHERE "
-                +KEY_LOGIN_UTILISATEUR+"='"+util.getLogin()+"' ;");
-
-
         // insert() retourne l'id du nouvel enregistrement inséré, ou -1 en cas d'erreur
-        return result;
+        return db.insert(TABLE_NAME,null,values);
     }
 
-     public int modMDP(Utilisateur util) {
+    public int modMDP(Utilisateur util) {
         // modification d'un enregistrement
         // valeur de retour : (int) nombre de lignes affectées par la requête
 
@@ -104,18 +99,36 @@ public class UtilisateurManager {
 
         return db.update(TABLE_NAME, values, where, whereArgs);
     }
-    /*public int modUtilisateur(Utilisateur util) {
+    public int modUtilisateur (Utilisateur util) {
         // modification d'un enregistrement
         // valeur de retour : (int) nombre de lignes affectées par la requête
 
         ContentValues values = new ContentValues();
-        values.put(KEY_NOM_ANIMAL, animal.getNom_animal());
+        values.put(KEY_CHEVEUX_UTILISATEUR, util.getCheveux());
+        values.put(KEY_GENRE_UTILISATEUR,util.getGenre());
+        values.put(KEY_LANGUE_UTILISATEUR,util.getLangue());
+        values.put(KEY_LOGIN_UTILISATEUR,util.getLogin());
+        values.put(KEY_MAIL_UTILISATEUR,util.getMail());
+        values.put(KEY_MDP_UTILISATEUR,util.getMotDePasse());
+        values.put(KEY_NOM_UTILISATEUR,util.getNom());
+        values.put(KEY_PRENOM_UTILISATEUR,util.getPrenom());
+        values.put(KEY_VILLE_UTILISATEUR,util.getVille());
+        values.put(KEY_ORIENTATION_UTILISATEUR,util.getOrientation());
+        values.put(KEY_TELEPHONE_UTILISATEUR,util.getTelephone());
+        values.put(KEY_PHOTO_UTILISATEUR,util.getPhoto());
+        values.put(KEY_YEUX_UTILISATEUR, util.getYeux());
 
-        String where = KEY_ID_ANIMAL+" = ?";
-        String[] whereArgs = {animal.getId_animal()+""};
+        //Gestion de la date de naissance
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String dateString = sdf.format(util.getDateDeNaissance());
+
+        values.put(KEY_DATE_NAISSANCE_UTILISATEUR, dateString);
+
+        String where = KEY_LOGIN_UTILISATEUR+" = ?";
+        String[] whereArgs = {util.getLogin()+""};
 
         return db.update(TABLE_NAME, values, where, whereArgs);
-    }*/
+    }
 
     public int supUtilisateur(Utilisateur util) {
         // suppression d'un enregistrement
@@ -168,7 +181,7 @@ public class UtilisateurManager {
             a.setVille(c.getString(c.getColumnIndex(KEY_VILLE_UTILISATEUR)));
             a.setOrientation(c.getString(c.getColumnIndex(KEY_ORIENTATION_UTILISATEUR)));
             a.setTelephone(c.getString(c.getColumnIndex(KEY_TELEPHONE_UTILISATEUR)));
-            //a.setPhoto(c.getType(c.getColumnIndex(KEY_PHOTO_UTILISATEUR)));
+            a.setPhoto(c.getBlob(c.getColumnIndex(KEY_PHOTO_UTILISATEUR)));
             a.setLangue(c.getString(c.getColumnIndex(KEY_LANGUE_UTILISATEUR)));
             c.close();
             if(dateNoConvert!=null)
@@ -241,5 +254,61 @@ public class UtilisateurManager {
         // sélection de tous les enregistrements de la table
         return db.rawQuery("SELECT * FROM "+TABLE_NAME, null);
     }*/
+    public static int ConversionYeuxNum(String couleur)
+    {
+        if(couleur!=null){
+        if(couleur.equals("Pas spécifié"))
+        {return 0;}
+        if(couleur.equals("Bleu"))
+        {return 1;}
+        if(couleur.equals("Brun"))
+        {return 2;}
+        if(couleur.equals("Noir"))
+        {return 3;}
+        if(couleur.equals("Gris"))
+        {return 4;}
+        if(couleur.equals("Rouge"))
+        {return 5;}
+        if(couleur.equals("Vert"))
+        {return 6;}}
+        return 0;
+    }
+    public static int ConversionLongCheveuxNum(String longueur)
+    {   if(longueur!=null){
+        if(longueur.contains("Pas spécifié"))
+        {return 0;}
+        if(longueur.contains("Chauve"))
+        {return 1;}
+        if(longueur.contains("Court"))
+        {return 2;}
+        if(longueur.contains("Mi-Long"))
+        {return 3;}
+        if(longueur.contains("Long"))
+        {return 4;}}
+        return 0;
+    }
+    public static int ConversionCouleurCheveuxNum(String couleur)
+    {   if(couleur!=null)
+        {
+        if(couleur.contains("Pas spécifié"))
+        {return 0;}
+        if(couleur.contains("Blond"))
+        {return 1;}
+        if(couleur.contains("Châtain"))
+        {return 2;}
+        if(couleur.contains("Roux"))
+        {return 3;}
+        if(couleur.contains("Brun"))
+        {return 4;}
+        if(couleur.contains("Noir"))
+        {return 5;}
+        if(couleur.contains("Vert"))
+        {return 6;}
+        if(couleur.contains("Bleu"))
+        {return 4;}
+        if(couleur.contains("Rose"))
+        {return 5;}}
+        return 0;
+    }
 
 } // class UtilisateurManager
