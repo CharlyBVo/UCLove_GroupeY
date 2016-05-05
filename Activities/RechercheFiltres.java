@@ -14,24 +14,20 @@ public class RechercheFiltres {
     private String Pref_Ville;
     private String Pref_Orientation;
 
+
     public RechercheFiltres()
     {}
 
-    public RechercheFiltres(String Login, String Filtre_genre, String Filtre_age , String Filtre_langue, String Filtre_cheveux, String Filtre_yeux, String Filtre_ville, String Filtre_orientation)
+    public RechercheFiltres(String Login)
     {
         this.Login= Login;
-        this.Pref_Genre=Filtre_genre;
-        this.Pref_Age=Filtre_age;
-        this.Pref_Langue= Filtre_langue;
-        this.Pref_Cheveux= Filtre_cheveux;
-        this.Pref_Yeux= Filtre_yeux;
-        this.Pref_Ville=Filtre_ville;
-        this.Pref_Orientation=Filtre_orientation;
+
     }
 
     public String getLogin() {return Login;}
 
     public void setLogin(String login) {Login = login;}
+
 
     public String getPref_Genre() {return Pref_Genre;}
 
