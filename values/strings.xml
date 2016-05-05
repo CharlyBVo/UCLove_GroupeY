@@ -47,27 +47,49 @@
     <string name="Bi">Bi</string>
     <string name="Gay">Gay</string>
     <string name="Cheveux">Cheveux</string>
+   <string-array name="ChoixGenre">
+    <item> </item>
+    <item>M</item>
+    <item>F</item>
+    </string-array>
     <string-array name="CheveuxTaille">
-        <item>Pas spécifié</item>
+        <item> </item>
         <item>Chauve</item>
         <item>Court</item>
         <item>Mi-long</item>
         <item>Long</item>
     </string-array>
-    <string-array name="CheveuxCouleur">
-        <item>Pas spécifié</item>
-        <item>Blond</item>
-        <item>Châtain</item>
-        <item>Roux</item>
-        <item>Brun</item>
-        <item>Noir</item>
-        <item>Vert</item>
-        <item>Bleu</item>
-        <item>Rose</item>
+    <string-array name="ChoixAge">
+    <item> </item>
+    <item>10</item>
+    <item>20</item>
+    <item>30</item>
     </string-array>
-    <string name="Yeux">Yeux</string>
+    <string-array name="ChoixLangue">
+    <item> </item>
+    <item>Anglais</item>
+    <item>Français</item>
+    </string-array>
+    <string-array name="ChoixOrientation">
+        <item> </item>
+        <item>Hétéro </item>
+        <item>Bi </item>
+        <item>Homo </item>
+
+    </string-array>
+    <string-array name="CheveuxCouleur">
+        <item> </item>
+        <item>Blond </item>
+        <item>Châtain </item>
+        <item>Roux </item>
+        <item>Brun </item>
+        <item>Noir </item>
+        <item>Vert </item>
+        <item>Bleu </item>
+        <item>Rose </item>
+    </string-array>
     <string-array name="YeuxCouleur">
-        <item>Pas spécifié</item>
+        <item> </item>
         <item>Bleu</item>
         <item>Brun</item>
         <item>Noir</item>
@@ -75,6 +97,7 @@
         <item>Rouge</item>
         <item>Vert</item>
     </string-array>
+    <string name="Yeux">Yeux</string>
     <string name="Langue">Langue</string>
     <string name="Français">Français</string>
     <string name="Anglais">Anglais</string>
